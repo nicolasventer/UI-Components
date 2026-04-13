@@ -63,7 +63,7 @@
 }
 
 /* Dark Mode */
-html[data-theme="dark"] {
+[data-theme="dark"] {
 	/* Primary Colors - Keep warm orange tones but adjust for dark mode */
 	--color-primary: rgb(255, 140, 70);
 	--color-primary-dark: rgb(220, 118, 51);
