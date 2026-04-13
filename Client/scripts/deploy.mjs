@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 
 const clientRoot = join(dirname(fileURLToPath(import.meta.url)), "..");
 const distDir = join(clientRoot, "dist");
-const docsDir = join(clientRoot, "docs");
+const docsDir = join(clientRoot, "../docs");
 
 if (!existsSync(distDir)) {
 	console.error("deploy: dist/ not found. Run build first.");
@@ -13,4 +13,4 @@ if (!existsSync(distDir)) {
 
 rmSync(docsDir, { recursive: true, force: true });
 cpSync(distDir, docsDir, { recursive: true });
-console.log("deploy: copied dist/ -> docs/");
+console.log("deploy: copied dist/ -> ../docs/");
